@@ -153,21 +153,17 @@ $v->validate([
 
 This list of rules are **in progress**. Of course, you can always contribute to the project if you'd like to add more to the base ruleset.
 
-#### alnum
-
-If the value is alphanumeric.
-
 #### alnumDash
 
 If the value is alphanumeric. Dashes and underscores are permitted.
 
+#### alnum
+
+If the value is alphanumeric.
+
 #### alpha
 
 If the value is alphabetic letters only.
-
-#### alphaDash
-
-If the value is alphabetic letters only. Dashes and underscores are permitted.
 
 #### array
 
@@ -181,43 +177,9 @@ Checks if the value is within the intervals defined. This check is inclusive, so
 
 If the value is a boolean.
 
-#### email
+#### checked
 
-If the value is a valid email.
-
-#### int
-
-If the value is an integer, including numbers within strings. 1 and '1' are both classed as integers.
-
-#### number
-
-If the value is a number, including numbers within strings.
-
-> Numeric strings consist of optional sign, any number of digits, optional decimal part and optional exponential part. Thus +0123.45e6 is a valid numeric value. Hexadecimal (e.g. 0xf4c3b00c), Binary (e.g. 0b10100111001), Octal (e.g. 0777) notation is allowed too but only without sign, decimal and exponential part.
-
-#### ip
-
-If the value is a valid IP address.
-
-#### max(int/string)
-
-Checks if the value is less than or equal to the given parameter. If the value is a string, this will check if the length of the string in characters is less than or equal to the given parameter.
-
-#### min(int/string)
-
-Checks if the value is greater than or equal to the given parameter. If the value is a string, this will check if the length of the string in characters is greater than or equal to the given parameter.
-
-#### required
-
-If the value is present.
-
-#### url
-
-If the value is formatted as a valid URL.
-
-#### matches(field)
-
-Checks if one given input matches the other. For example, checking if *password* matches *password_confirm*.
+If a field has been 'checked' or not, meaning it contains one of the following values: *'yes'*, *'on'*, *'1'*, *1*, *true*, or *'true'*. This can be used for determining if an HTML checkbox has been checked.
 
 #### date
 
@@ -236,13 +198,47 @@ $v->validate([
 ]);
 ```
 
-#### checked
+#### email
 
-If a field has been 'checked' or not, meaning it contains one of the following values: *'yes'*, *'on'*, *'1'*, *1*, *true*, or *'true'*. This can be used for determining if an HTML checkbox has been checked.
+If the value is a valid email.
+
+#### int
+
+If the value is an integer, including numbers within strings. 1 and '1' are both classed as integers.
+
+#### ip
+
+If the value is a valid IP address.
+
+#### matches(field)
+
+Checks if one given input matches the other. For example, checking if *password* matches *password_confirm*.
+
+#### max(int/string)
+
+Checks if the value is less than or equal to the given parameter. If the value is a string, this will check if the length of the string in characters is less than or equal to the given parameter.
+
+#### min(int/string)
+
+Checks if the value is greater than or equal to the given parameter. If the value is a string, this will check if the length of the string in characters is greater than or equal to the given parameter.
+
+#### number
+
+If the value is a number, including numbers within strings.
+
+> Numeric strings consist of optional sign, any number of digits, optional decimal part and optional exponential part. Thus +0123.45e6 is a valid numeric value. Hexadecimal (e.g. 0xf4c3b00c), Binary (e.g. 0b10100111001), Octal (e.g. 0777) notation is allowed too but only without sign, decimal and exponential part.
 
 #### regex(expression)
 
 If the given input has a match for the regular expression given.
+
+#### required
+
+If the value is present.
+
+#### url
+
+If the value is formatted as a valid URL.
 
 ## Contributing
 
