@@ -198,6 +198,10 @@ $v->validate([
 ]);
 ```
 
+#### different(field)
+
+Checks if one given input is different to the other.
+
 #### email
 
 If the value is a valid email.
